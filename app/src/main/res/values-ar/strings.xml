@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="enter_data">برجاء ادخال بيانات المستخدم</string>
+    <string name="user_data">بيانات المستخدم</string>
+    <string name="app_name">مدار البرمجة</string>
+    <string name="user_name">الأسم</string>
+    <string name="user_age">السن</string>
+    <string name="user_job_title">الوظيفة</string>
+    <string name="user_gender">الجنس</string>
+    <string name="male">ذكر</string>
+    <string name="female">انثى</string>
+    <string name="save">حفظ</string>
+    <string name="display">عرض</string>
+</resources>
