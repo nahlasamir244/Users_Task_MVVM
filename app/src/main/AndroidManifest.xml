@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_madar_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".usersPreview.UsersPreviewActivity"></activity>
+        <activity android:name=".usersPreview.UsersPreviewActivity"
+            android:parentActivityName=".datacollection.DataCollectionActivity"></activity>
         <activity android:name=".signleuserpreview.SingleUserPreviewActivity" />
         <activity android:name=".datacollection.DataCollectionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
