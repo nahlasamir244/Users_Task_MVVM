@@ -12,4 +12,7 @@
     <string name="save">حفظ</string>
     <string name="display">عرض</string>
     <string name="displayAll">عرض الجميع</string>
+    <string name="deleteAll">مسح الكل</string>
+    <string name="userAdded">تم اضافة المستخدم بنجاح</string>
+    <string name="insertCorrectValues">برجاء ادخال بيانات صحيحة ..!</string>
 </resources>

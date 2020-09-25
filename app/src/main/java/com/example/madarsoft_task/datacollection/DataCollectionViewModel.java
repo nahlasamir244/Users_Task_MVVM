@@ -20,6 +20,7 @@ public class DataCollectionViewModel extends AndroidViewModel {
     }
     public void displayUsers(){
         Intent intent = new Intent(getApplication(), UsersPreviewActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getApplication().startActivity(intent);
     }
 }
