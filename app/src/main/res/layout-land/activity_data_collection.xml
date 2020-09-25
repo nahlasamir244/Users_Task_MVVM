@@ -40,21 +40,23 @@
         android:elevation="2dp"
         />
 
-    <EditText
-        android:id="@+id/userAge"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textViewAge"
+        android:text="@string/user_age"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:background="@drawable/edit_texts_shapes"
-        android:inputType="number"
-        android:maxLength="3"
-        android:padding="16dp"
-        android:textColor="@color/black"
-        android:textCursorDrawable="@drawable/cursor_color"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/userName"
-        android:hint="@string/user_age"
+        />
+    <NumberPicker
+        android:id="@+id/userAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        app:layout_constraintStart_toEndOf="@id/textViewAge"
+        app:layout_constraintTop_toBottomOf="@id/userName"
         android:elevation="2dp"
         />
 
@@ -110,6 +112,7 @@
             />
     </RadioGroup>
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/buttonsContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -134,12 +137,12 @@
             />
 
         <Button
-            android:id="@+id/display"
+            android:id="@+id/displayAll"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/button_shape"
-            android:text="@string/display"
+            android:background="@drawable/display_all_button_shape"
+            android:text="@string/displayAll"
             android:textStyle="bold"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
@@ -148,7 +151,6 @@
             android:layout_weight="1"
             />
     </androidx.appcompat.widget.LinearLayoutCompat>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>

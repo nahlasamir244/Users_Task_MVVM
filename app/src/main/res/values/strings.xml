@@ -10,5 +10,6 @@
     <string name="female">female</string>
     <string name="save">Save</string>
     <string name="display">Display</string>
+    <string name="displayAll">Display All</string>
 
 </resources>

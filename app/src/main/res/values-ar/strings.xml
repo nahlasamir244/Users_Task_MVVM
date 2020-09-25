@@ -11,4 +11,5 @@
     <string name="female">انثى</string>
     <string name="save">حفظ</string>
     <string name="display">عرض</string>
+    <string name="displayAll">عرض الجميع</string>
 </resources>

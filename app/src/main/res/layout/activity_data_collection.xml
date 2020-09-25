@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DataCollectionActivity">
+    tools:context=".datacollection.DataCollectionActivity">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -40,22 +40,23 @@
         android:hint="@string/user_name"
         android:elevation="2dp"
         />
-
-    <EditText
-        android:id="@+id/userAge"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textViewAge"
+        android:text="@string/user_age"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:background="@drawable/edit_texts_shapes"
-        android:inputType="number"
-        android:maxLength="3"
-        android:padding="16dp"
-        android:textColor="@color/black"
-        android:textCursorDrawable="@drawable/cursor_color"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/userName"
-        android:hint="@string/user_age"
+        />
+    <NumberPicker
+        android:id="@+id/userAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        app:layout_constraintStart_toEndOf="@id/textViewAge"
+        app:layout_constraintTop_toBottomOf="@id/userName"
         android:elevation="2dp"
         />
 
@@ -95,13 +96,13 @@
             android:text="@string/male"
             android:textColor="@color/black"
             android:textSize="13sp"
-            android:layout_marginRight="45dp"
+            android:layout_marginEnd="45dp"
             android:checked="true"
             android:buttonTint="@color/radioTint"
             />
 
         <RadioButton
-            android:id="@+id/female_radio_btn"
+            android:id="@+id/female_radio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/female"
@@ -128,12 +129,12 @@
     />
 
     <Button
-        android:id="@+id/display"
+        android:id="@+id/displayAll"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/button_shape"
-        android:text="@string/display"
+        android:background="@drawable/display_all_button_shape"
+        android:text="@string/displayAll"
         android:textStyle="bold"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/save"
