@@ -14,4 +14,13 @@
     <string name="deleteAll">Delete All</string>
     <string name="userAdded">User Added Successfully</string>
     <string name="insertCorrectValues">Please Enter Valid Data ..!</string>
+    <string name="alert_title">Title</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirmationTitle">Are you sure ?</string>
+    <string name="willBeDeleted">users will be deleted</string>
+    <string name="userDeleted">User Deleted Successfully</string>
+    <string name="usersDeleted">All Users Deleted Successfully</string>
+    <string name="error">Error</string>
+    <string name="noData">There is no users !</string>
 </resources>

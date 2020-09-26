@@ -6,14 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".usersPreview.UsersPreviewActivity">
 
+    <LinearLayout
+        android:id="@+id/noDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/noData"
+            android:textAlignment="center"
+            android:textColor="@color/major"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/usersRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/single_user_row"/>
+        tools:listitem="@layout/row_single_user" />
 </androidx.constraintlayout.widget.ConstraintLayout>

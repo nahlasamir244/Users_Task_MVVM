@@ -1,158 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="16dp"
-    android:paddingBottom="16dp">
 
-    <TextView
-        android:id="@+id/enterData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/enter_data"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:layout_margin="32dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/major"
-        android:textSize="15sp"
-        />
-
-    <EditText
-        android:id="@+id/userName"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@drawable/edit_texts_shapes"
-        android:inputType="textPersonName"
-        android:maxLength="100"
-        android:padding="16dp"
-        android:textColor="@color/black"
-        android:textCursorDrawable="@drawable/cursor_color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/enterData"
-        android:hint="@string/user_name"
-        android:elevation="2dp"
-        />
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:paddingBottom="16dp">
 
-    <TextView
-        android:id="@+id/textViewAge"
-        android:text="@string/user_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userName"
-        />
-    <NumberPicker
-        android:id="@+id/userAge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:padding="16dp"
-        app:layout_constraintStart_toEndOf="@id/textViewAge"
-        app:layout_constraintTop_toBottomOf="@id/userName"
-        android:elevation="2dp"
-        />
-
-    <EditText
-        android:id="@+id/userJobTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@drawable/edit_texts_shapes"
-        android:inputType="text"
-        android:maxLength="100"
-        android:padding="16dp"
-        android:textColor="@color/black"
-        android:textCursorDrawable="@drawable/cursor_color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userAge"
-        android:hint="@string/user_job_title"
-        android:elevation="2dp"
-        />
-
-    <RadioGroup
-        android:id="@+id/gender_radio_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="16dp"
-        android:textColor="@color/major"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userJobTitle"
-        >
-        <RadioButton
-            android:id="@+id/male_radio"
+        <TextView
+            android:id="@+id/enterData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/male"
-            android:textColor="@color/black"
-            android:textSize="13sp"
-            android:layout_marginRight="45dp"
-            android:checked="true"
-            android:buttonTint="@color/radioTint"
-            />
+            android:layout_margin="32dp"
+            android:text="@string/enter_data"
+            android:textColor="@color/major"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/female_radio_btn"
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/edit_text_shape"
+            android:elevation="2dp"
+            android:hint="@string/user_name"
+            android:inputType="textPersonName"
+            android:maxLength="100"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/cursor_shape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enterData" />
+
+        <TextView
+            android:id="@+id/textViewAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/female"
-            android:textColor="@color/black"
-            android:textSize="13sp"
-            android:buttonTint="@color/radioTint"
-            />
-    </RadioGroup>
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/buttonsContainer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender_radio_group"
-        android:orientation="horizontal"
-        android:layout_margin="40dp"
-        android:weightSum="2"
-        >
-        <Button
-            android:id="@+id/save"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/button_shape"
-            android:text="@string/save"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="16dp"
-            android:layout_weight="1"
-            />
+            android:text="@string/user_age"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userName" />
 
-        <Button
-            android:id="@+id/displayAll"
-            android:layout_width="240dp"
+        <NumberPicker
+            android:id="@+id/userAge"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/display_all_button_shape"
-            android:text="@string/displayAll"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="16dp"
-            android:layout_weight="1"
-            />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            android:elevation="2dp"
+            android:padding="16dp"
+            app:layout_constraintStart_toEndOf="@id/textViewAge"
+            app:layout_constraintTop_toBottomOf="@id/userName" />
+
+        <EditText
+            android:id="@+id/userJobTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/edit_text_shape"
+            android:elevation="2dp"
+            android:hint="@string/user_job_title"
+            android:inputType="text"
+            android:maxLength="100"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/cursor_shape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userAge" />
+
+        <RadioGroup
+            android:id="@+id/gender_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="horizontal"
+            android:textColor="@color/major"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userJobTitle">
+
+            <RadioButton
+                android:id="@+id/male_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="45dp"
+                android:buttonTint="@color/radioTint"
+                android:checked="true"
+                android:text="@string/male"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/female_radio_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/radioTint"
+                android:text="@string/female"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/buttonsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_radio_group">
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_shape"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/displayAll"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/display_all_button_shape"
+                android:text="@string/displayAll"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.core.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>

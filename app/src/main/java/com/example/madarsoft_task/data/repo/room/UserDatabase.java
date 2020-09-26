@@ -8,13 +8,15 @@ import androidx.room.RoomDatabase;
 
 import com.example.madarsoft_task.data.model.User;
 
-@Database(entities = {User.class},version = 1)
+@Database(entities = {User.class}, version = 1)
 public abstract class UserDatabase extends RoomDatabase {
     private static UserDatabase instance;
-    public  abstract UserDAO userDAO();
-    public static synchronized UserDatabase getInstance(Context context){
-        if(instance ==null){
-            instance= Room.databaseBuilder(context.getApplicationContext(),
+
+    public abstract UserDAO userDAO();
+
+    public static synchronized UserDatabase getInstance(Context context) {
+        if (instance == null) {
+            instance = Room.databaseBuilder(context.getApplicationContext(),
                     UserDatabase.class, "users_database")
                     .fallbackToDestructiveMigration()
                     .build();

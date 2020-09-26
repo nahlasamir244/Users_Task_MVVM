@@ -13,33 +13,39 @@ public class UserRoomProvider {
     private UserDAO userDAO;
     private LiveData<List<User>> users;
     private LiveData<User> user;
-    public UserRoomProvider(Context context){
-    UserDatabase userDatabase = UserDatabase.getInstance(context);
-    userDAO = userDatabase.userDAO();
+
+    public UserRoomProvider(Context context) {
+        UserDatabase userDatabase = UserDatabase.getInstance(context);
+        userDAO = userDatabase.userDAO();
     }
 
     public LiveData<List<User>> getAll() {
         users = userDAO.getAll();
         return users;
     }
-    public LiveData<User> getByName(String name){
+
+    public LiveData<User> getByName(String name) {
         user = userDAO.getByName(name);
         return user;
     }
-    public void insert(User user){
+
+    public void insert(User user) {
         new InsertUserAsyncTask(userDAO).execute(user);
     }
-    public void update(User user){
+
+    public void update(User user) {
         new UpdateUserAsyncTask(userDAO).execute(user);
     }
-    public void delete(User user){
+
+    public void delete(User user) {
         new DeleteUserAsyncTask(userDAO).execute(user);
     }
-    public void deleteAll(){
+
+    public void deleteAll() {
         new DeleteAllUsersAsyncTask(userDAO).execute();
     }
 
-    private static class InsertUserAsyncTask extends AsyncTask<User,Void,Void> {
+    private static class InsertUserAsyncTask extends AsyncTask<User, Void, Void> {
         private UserDAO userDAO;
 
         private InsertUserAsyncTask(UserDAO userDAO) {
@@ -53,7 +59,7 @@ public class UserRoomProvider {
         }
     }
 
-    private static class UpdateUserAsyncTask extends AsyncTask<User,Void,Void> {
+    private static class UpdateUserAsyncTask extends AsyncTask<User, Void, Void> {
         private UserDAO userDAO;
 
         private UpdateUserAsyncTask(UserDAO userDAO) {
@@ -67,7 +73,7 @@ public class UserRoomProvider {
         }
     }
 
-    private static class DeleteUserAsyncTask extends AsyncTask<User,Void,Void> {
+    private static class DeleteUserAsyncTask extends AsyncTask<User, Void, Void> {
         private UserDAO userDAO;
 
         private DeleteUserAsyncTask(UserDAO userDAO) {
@@ -80,7 +86,8 @@ public class UserRoomProvider {
             return null;
         }
     }
-    private static class DeleteAllUsersAsyncTask extends AsyncTask<Void,Void,Void> {
+
+    private static class DeleteAllUsersAsyncTask extends AsyncTask<Void, Void, Void> {
         private UserDAO userDAO;
 
         private DeleteAllUsersAsyncTask(UserDAO userDAO) {

@@ -15,4 +15,13 @@
     <string name="deleteAll">مسح الكل</string>
     <string name="userAdded">تم اضافة المستخدم بنجاح</string>
     <string name="insertCorrectValues">برجاء ادخال بيانات صحيحة ..!</string>
+    <string name="alert_title">عنوان</string>
+    <string name="ok">موافق</string>
+    <string name="cancel">الغاء</string>
+    <string name="confirmationTitle">هل انت متأكد ؟</string>
+    <string name="willBeDeleted">مستخدم سوف يتم حذفهم</string>
+    <string name="userDeleted">تم مسح المستخدم بنجاح</string>
+    <string name="usersDeleted">تم مسح جميع المستخدمين بنجاح</string>
+    <string name="error">خطأ</string>
+    <string name="noData">لا يوجد مستخدمين</string>
 </resources>

@@ -17,11 +17,12 @@ import com.example.madarsoft_task.data.model.User;
 
 public class DataCollectionActivity extends AppCompatActivity {
     private DataCollectionViewModel dataCollectionViewModel;
-    private EditText nameEditText,  jobTitleEditText;
+    private EditText nameEditText, jobTitleEditText;
     private NumberPicker ageNumberPicker;
     private RadioGroup genderRadioGroup;
-    private RadioButton maleRadioButton,femaleRadioButton;
-    private Button saveButton,displayAllButton;
+    private RadioButton maleRadioButton, femaleRadioButton;
+    private Button saveButton, displayAllButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +30,9 @@ public class DataCollectionActivity extends AppCompatActivity {
         initViews();
         initActions();
     }
-    private void initViews(){
-        dataCollectionViewModel= new ViewModelProvider(this,
+
+    private void initViews() {
+        dataCollectionViewModel = new ViewModelProvider(this,
                 ViewModelProvider.AndroidViewModelFactory.getInstance(this.getApplication()))
                 .get(DataCollectionViewModel.class);
         nameEditText = findViewById(R.id.userName);
@@ -44,22 +46,24 @@ public class DataCollectionActivity extends AppCompatActivity {
         saveButton = findViewById(R.id.save);
         displayAllButton = findViewById(R.id.displayAll);
     }
-    private void initActions(){
-            saveButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String userName = nameEditText.getText().toString();
-                    int userAge = ageNumberPicker.getValue();
-                    String userJobTitle = jobTitleEditText.getText().toString();
-                    int userGender=(maleRadioButton.isChecked())?1:2;
-                    if(userName.trim().isEmpty()||userJobTitle.trim().isEmpty()){
-                        Toast.makeText(getApplicationContext(),R.string.insertCorrectValues,Toast.LENGTH_SHORT).show();
-                    }else{
-                        User user = new User(userName,userAge,userJobTitle,userGender);
-                        saveUser(user);
-                    }
+
+    private void initActions() {
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String userName = nameEditText.getText().toString();
+                int userAge = ageNumberPicker.getValue();
+                String userJobTitle = jobTitleEditText.getText().toString();
+                int userGender = (maleRadioButton.isChecked()) ? 1 : 2;
+                if (userName.trim().isEmpty() || userJobTitle.trim().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), R.string.insertCorrectValues, Toast.LENGTH_SHORT).show();
+                } else {
+                    User user = new User(userName, userAge, userJobTitle, userGender);
+                    saveUser(user);
+                    resetFields();
                 }
-            });
+            }
+        });
 
         displayAllButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,11 +72,20 @@ public class DataCollectionActivity extends AppCompatActivity {
             }
         });
     }
-    private void saveUser(User user){
-       dataCollectionViewModel.insertUser(user);
-        Toast.makeText(this,R.string.userAdded,Toast.LENGTH_SHORT).show();
+
+    private void resetFields() {
+        nameEditText.setText("");
+        jobTitleEditText.setText("");
+        ageNumberPicker.setValue(10);
+        maleRadioButton.setChecked(true);
     }
-    private void showUsers(){
+
+    private void saveUser(User user) {
+        dataCollectionViewModel.insertUser(user);
+        Toast.makeText(this, R.string.userAdded, Toast.LENGTH_SHORT).show();
+    }
+
+    private void showUsers() {
         dataCollectionViewModel.displayUsers();
     }
 }
