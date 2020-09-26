@@ -17,8 +17,9 @@ import java.util.List;
 
 public class SingleUserPreviewActivity extends AppCompatActivity {
     private SingleUserPreviewViewModel singleUserPreviewViewModel;
-    private TextView userNameTextView, userAgeTextView , userJobTextView, userGenderTextView;
+    private TextView userNameTextView, userAgeTextView, userJobTextView, userGenderTextView;
     String userName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +46,7 @@ public class SingleUserPreviewActivity extends AppCompatActivity {
                 userNameTextView.setText(user.getName());
                 userAgeTextView.setText(String.valueOf(user.getAge()));
                 userJobTextView.setText(user.getJobTitle());
-                userGenderTextView.setText(user.getGender()==1?"male":"female");
+                userGenderTextView.setText(user.getGender() == 1 ? "male" : "female");
             }
         });
     }
