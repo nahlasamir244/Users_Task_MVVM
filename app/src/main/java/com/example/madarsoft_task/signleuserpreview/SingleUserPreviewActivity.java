@@ -46,7 +46,7 @@ public class SingleUserPreviewActivity extends AppCompatActivity {
                 userNameTextView.setText(user.getName());
                 userAgeTextView.setText(String.valueOf(user.getAge()));
                 userJobTextView.setText(user.getJobTitle());
-                userGenderTextView.setText(user.getGender() == 1 ? "male" : "female");
+                userGenderTextView.setText(user.getGender() == 1 ? R.string.male : R.string.female);
             }
         });
     }
