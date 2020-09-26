@@ -1,4 +1,4 @@
-package com.example.madarsoft_task;
+package com.example.madarsoft_task.utils;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 
+import com.example.madarsoft_task.R;
 import com.example.madarsoft_task.data.model.User;
 import com.example.madarsoft_task.usersPreview.UsersPreviewViewModel;
 

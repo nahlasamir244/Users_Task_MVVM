@@ -23,4 +23,5 @@
     <string name="usersDeleted">All Users Deleted Successfully</string>
     <string name="error">Error</string>
     <string name="noData">There is no users !</string>
+    <string name="undo">undo</string>
 </resources>

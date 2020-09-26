@@ -28,7 +28,7 @@ public interface UserDAO {
     @Query("SELECT * FROM user_table WHERE name = :name LIMIT 1")
     LiveData<User> getByName(String name);
 
-    @Query("SELECT * FROM user_table")
+    @Query("SELECT * FROM user_table ORDER BY name ASC")
     LiveData<List<User>> getAll();
 
 }

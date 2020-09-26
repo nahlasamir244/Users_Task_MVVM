@@ -24,4 +24,5 @@
     <string name="usersDeleted">تم مسح جميع المستخدمين بنجاح</string>
     <string name="error">خطأ</string>
     <string name="noData">لا يوجد مستخدمين</string>
+    <string name="undo">تراجع</string>
 </resources>

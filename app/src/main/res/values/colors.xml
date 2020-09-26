@@ -9,6 +9,6 @@
     <color name="black">#000</color>
     <color name="radioTint">#157cde</color>
     <color name="white">#fff</color>
-    <color name="shadow">#D8D8D8</color>
+    <color name="shadow">#FF6347</color>
     <color name="red">#C4382E</color>
 </resources>

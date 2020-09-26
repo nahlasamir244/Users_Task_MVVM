@@ -47,6 +47,10 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
         notifyDataSetChanged();
     }
 
+    public List<User> getUsers() {
+        return users;
+    }
+
     @Override
     public int getItemCount() {
         return users.size();
