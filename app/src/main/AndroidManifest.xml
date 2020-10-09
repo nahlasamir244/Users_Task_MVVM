@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.madarsoft_task">
+    package="com.example.users_task">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_madar_round"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".usersPreview.UsersPreviewActivity"
-            android:parentActivityName=".datacollection.DataCollectionActivity"></activity>
-        <activity android:name=".signleuserpreview.SingleUserPreviewActivity" />
-        <activity android:name=".datacollection.DataCollectionActivity">
+        <activity android:name="com.example.users_task.usersPreview.UsersPreviewActivity"
+            android:parentActivityName="com.example.users_task.datacollection.DataCollectionActivity"></activity>
+        <activity android:name="com.example.users_task.signleuserpreview.SingleUserPreviewActivity" />
+        <activity android:name="com.example.users_task.datacollection.DataCollectionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

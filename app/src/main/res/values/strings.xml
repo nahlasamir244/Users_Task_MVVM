@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MadarSoft Task</string>
+    <string name="app_name">Users Task</string>
     <string name="enter_data">Please Enter User Data</string>
     <string name="user_data">User Data</string>
     <string name="user_name">name</string>
