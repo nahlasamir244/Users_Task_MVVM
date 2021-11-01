@@ -29,9 +29,7 @@ public class UserRoomProvider {
         return user;
     }
 
-    public void insert(User user) {
-        new InsertUserAsyncTask(userDAO).execute(user);
-    }
+
 
     public void update(User user) {
         new UpdateUserAsyncTask(userDAO).execute(user);

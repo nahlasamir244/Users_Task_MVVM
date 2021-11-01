@@ -27,9 +27,9 @@ public class UserRepo {
         return userRoomProvider.getByName(name);
     }
 
-    public void insert(User user) {
-        userRoomProvider.insert(user);
-    }
+//    public void insert(User user) {
+//        userRoomProvider.insert(user);
+//    }
 
     public void update(User user) {
         userRoomProvider.update(user);
